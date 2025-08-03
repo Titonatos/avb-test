@@ -1,11 +1,10 @@
-import Header from '@/components/Header';
 import Main from '@/components/Main';
+import { TaskProvider } from '@/contexts/TaskContext';
 
 export default function Home() {
   return (
-    <div>
-      <Header />
+    <TaskProvider>
       <Main />
-    </div>
+    </TaskProvider>
   );
 }
