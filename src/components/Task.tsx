@@ -12,15 +12,15 @@ export default function Task({ name, taskId }: Props) {
   const date = new Date(parseInt(taskId)).toLocaleString('ru-RU');
 
   return (
-    <div className='flex min-h-[40px] px-2 gap-4 items-center bg-[#F3EFEE]/40 rounded-lg text-clip flex-shrink-0'>
+    <div className='flex min-h-[40px] px-2 gap-4 items-center bg-muted/40 rounded-lg text-clip flex-shrink-0'>
       <Checkbox />
       <div className='flex-1 flex flex-col py-2'>
-        <span className='text-sm'>{name}</span>
-        <span className='text-xs text-gray-500'>{date}</span>
+        <span className='text-sm text-foreground'>{name}</span>
+        <span className='text-xs text-muted-foreground'>{date}</span>
       </div>
       <button
         onClick={() => deleteTask(taskId)}
-        className='w-6 h-6 flex items-center justify-center hover:bg-red-100 rounded transition-colors'
+        className='w-6 h-6 flex items-center justify-center hover:bg-destructive/10 rounded transition-colors'
         title='Удалить задачу'
       >
         <DeleteIcon width={16} height={16} />
