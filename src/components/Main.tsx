@@ -12,7 +12,7 @@ export default function Main() {
   return (
     <ThemeProvider> 
     <main>
-      <div className='max-w-[1200px] mx-auto'>
+      <div className='max-w-[1200px] mx-auto relative'>
         <div className='content-center h-[80px] text-4xl'>Список задач</div>
         
       <ThemeToggle />
